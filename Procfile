@@ -1,0 +1,1 @@
+web: gunicorn linguoweb.wsgi --log-file -
