@@ -1,0 +1,11 @@
+SECTION  = (
+
+	('INICIO' , 'INICIO'),
+	('REVISTA' , 'REVISTA'),
+	('RECURSOS' , 'RECURSOS'),
+	('SERVICIOS' , 'SERVICIOS'),
+	('PROFESORES' , 'PROFESORES'),
+
+
+
+)

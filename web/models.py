@@ -1,4 +1,5 @@
 from django.db import models
+from . import constants
 
 # Create your models here.
 
@@ -28,10 +29,12 @@ class Profesor(models.Model):
 class Contenido(models.Model):
 	titulo = models.CharField(max_length=50)
 	descripcion = models.CharField(max_length=50)
+	seccion = models.CharField(max_length=25,choices=constants.SECTION)
 	texto = models.TextField()
+	imagen = models.CharField(max_length=100)
 
 	def __str__(self):
-		return self.descripcion
+		return ("%s - %s") % (self.descripcion, self.seccion)
 
 
 
