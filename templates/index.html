@@ -13,36 +13,18 @@
 	<section class="features">
 
 		<div class="wrapper">
+			{% for feature in features %}
 				<div class="feature">
 					<div class="ficon">
 						<img src="{% static 'img/menu_icon.png' %}" alt="">
 					</div>
 					<div class="details_exp">
-						<h3>Excepteur sint.</h3>
-						<p>Coccaecat cupidatat aliqu proident sunt in culpa qui officia deserunt mollit anim.</p>
-						<a href="#">more details<span>→</span></a>
+						<h3>{{feature.titulo}}</h3>
+						<p>{{feature.texto}}</p>
+					<!--	<a href="#">more details<span>→</span></a> -->
 					</div>
-				</div>
-				<div class="feature">
-					<div class="ficon">
-						<img src="{% static 'img/menu_icon.png' %}" alt="">
-					</div>
-					<div class="details_exp">
-						<h3>Excepteur sint.</h3>
-						<p>Coccaecat cupidatat aliqu proident sunt in culpa qui officia deserunt mollit anim.</p>
-						<a href="#">more details<span>→</span></a>
-					</div>
-				</div>
-				<div class="feature">
-					<div class="ficon">
-						<img src="{% static 'img/menu_icon.png' %}" alt="">
-					</div>
-					<div class="details_exp">
-						<h3>Excepteur sint.</h3>
-						<p>Coccaecat cupidatat aliqu proident sunt in culpa qui officia deserunt mollit anim.</p>
-						<a href="#">more details<span>→</span></a>
-					</div>
-				</div>				
+			</div>
+			{% endfor %}
 			</div>
 
 	</section><!--  End Features  -->
