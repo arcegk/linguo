@@ -12,19 +12,15 @@
 
 	{% block content %}
 	<body>
-		<!---start-wrap-->
-		
-		<!---//End-header-->
-		<!---start-content-->
 		<div class="content">
 			<div class="wrap">
 			 <div id="main" role="main">
+			      
 			      <ul id="tiles">
-
 			      {%for profesor in object_list%}
 			        <!-- These are our grid blocks -->
 			        <li>
-			        	<img src="{{profesor.image.url}}" width="282" height="118">
+			        	<img src="{{profesor.foto_url}}" width="282" height="118">
 			        	<div class="post-info">
 			        		<div class="post-basic-info">
 				        		<h3>{{profesor.nombre}}</h3>

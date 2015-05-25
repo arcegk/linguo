@@ -15,3 +15,11 @@ class HomeTemplateView(TemplateView):
 class ProfesorListView(ListView):
 	model = Profesor
 	template_name = "profesores.html"
+
+class ServicioTemplateView(TemplateView):
+	template_name = "servicios.html"
+
+	def get_context_data(self, **kwargs):
+		context = super(ServicioTemplateView, self).get_context_data(**kwargs)
+		context['servicios'] = Contenido.objects.filter(seccion="SERVICIOS")
+		return context

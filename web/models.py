@@ -15,6 +15,7 @@ class Profesor(models.Model):
 	direccion = models.CharField(max_length=25)
 	telefono = models.CharField(max_length=15)
 	idioma = models.ManyToManyField(Idioma)
+	foto_url = models.CharField(max_length=200, blank=True, verbose_name="Enlaza una foto!")
 	lugar_apredizaje = models.CharField(max_length=50)
 	estudios = models.TextField(max_length=350)
 	referencia_personal_1 = models.CharField(max_length=100 , verbose_name="Referencia personal 1")

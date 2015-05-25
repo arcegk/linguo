@@ -21,14 +21,14 @@
 {% block header %}
 	<header>
 		<div class="wrapper">
-			<img src="img/logo.png" alt="Logo" class="logo">
+			<img src="{% static 'img/logo.jpg' %}" alt="Logo" class="logo">
 			<a href="#" class="menu_icon" id="menu_icon"></a>
 			<nav id="nav_menu">
 				<ul>
 					<li><a href="/">Inicio</a></li>
-					<li><a href="#">Servicios</a></li>
+					<li><a href="{% url 'servicios' %}">Servicios</a></li>
 					<li><a href="{% url 'profesores' %}">Profesores</a></li>
-					<li><a href="#">Revista</a></li>
+					<li><a href=>Revista</a></li>
 					<li><a href="#">Recursos</a></li>
 				</ul>
 			</nav>
