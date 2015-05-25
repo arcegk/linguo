@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Idioma , Profesor
+from .models import Idioma , Profesor , Contenido
 
 # Register your models here.
 admin.site.register(Idioma)
