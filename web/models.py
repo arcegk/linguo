@@ -25,5 +25,13 @@ class Profesor(models.Model):
 	def __str__(self):
 		return("%s - %s") % (self.nombre,self.idioma)
 
+class Contenido(models.Model):
+	titulo = models.CharField(max_length=50)
+	descripcion = models.CharField(max_length=50)
+	texto = models.TextField()
+
+	def __str__(self):
+		return self.descripcion
+
 
 
