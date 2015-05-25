@@ -1,42 +1,6 @@
+{% extends "base.html" %}
 {% load static from staticfiles%}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Linguo Idiomas</title>
-	<meta charset="utf-8">
-	<meta name="author" content="pixelhint.com">
-	<meta name="description" content="Crafty is a stunning HTML5/CSS3 multi-purpose template, well-coded, commented code and easy to customize"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css'%}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/main_responsive.css'%}">
-    <script type="text/javascript" src="{% static 'js/jquery.js'%}"></script>
-    <script type="text/javascript" src="{% static 'js/carouFredSel.js'%}"></script>
-    <script type="text/javascript" src="{% static 'js/main.js'%}"></script>
-</head>
-<body>
-
-	<header>
-		<div class="wrapper">
-			<img src="img/logo.png" alt="Crafty" class="logo">
-			<a href="#" class="menu_icon" id="menu_icon"></a>
-			<nav id="nav_menu">
-				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="#">Servicios</a></li>
-					<li><a href="#">Revista</a></li>
-					<li><a href="#">Recursos</a></li>
-					<li><a href="#">Profesores</a></li>
-				</ul>
-			</nav>
-
-			<ul class="social">
-				<li><a class="fb" href="#"></a></li>
-				<li><a class="twitter" href="#"></a></li>
-				<li><a class="gplus" href="#"></a></li>
-			</ul>
-		</div>
-	</header><!--  End Header  -->
-
+{% block content %}
 	<section class="billboard">
 			<div class="wrapper">
 				<div class="caption">
@@ -51,7 +15,7 @@
 		<div class="wrapper">
 				<div class="feature">
 					<div class="ficon">
-						<img src="img/icon1.png" alt="">
+						<img src="{% static 'img/menu_icon.png' %}" alt="">
 					</div>
 					<div class="details_exp">
 						<h3>Excepteur sint.</h3>
@@ -61,7 +25,7 @@
 				</div>
 				<div class="feature">
 					<div class="ficon">
-						<img src="img/icon2.png" alt="">
+						<img src="{% static 'img/menu_icon.png' %}" alt="">
 					</div>
 					<div class="details_exp">
 						<h3>Excepteur sint.</h3>
@@ -71,7 +35,7 @@
 				</div>
 				<div class="feature">
 					<div class="ficon">
-						<img src="img/icon3.png" alt="">
+						<img src="{% static 'img/menu_icon.png' %}" alt="">
 					</div>
 					<div class="details_exp">
 						<h3>Excepteur sint.</h3>
@@ -108,10 +72,4 @@
 
 	</section><!--  End Testimonials  -->
 
-
-	<footer>
-		<p class="rights">Diseñado por Linguo idiomas</p>
-	</footer><!--  End Footer  -->
-
-</body>
-</html>
+{%endblock%}

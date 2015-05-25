@@ -1,6 +1,12 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
+from .models import Profesor
 # Create your views here.
 
-class HomeView(TemplateView):
+class HomeTemplateView(TemplateView):
 	template_name = "index.html"
+
+
+class ProfesorListView(ListView):
+	model = Profesor
+	template_name = "profesores.html"

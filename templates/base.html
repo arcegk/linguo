@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static from staticfiles%}
+<html lang="es">
+<head>
+	<title>Linguo Idiomas</title>
+	<meta charset="utf-8">
+	<meta name="author" content="sikkuinnova.com">
+	<meta name="description" content="Linguo Idiomas is ..."/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	{% block css %}{% endblock %}
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main_responsive.css'%}">
+    <script type="text/javascript" src="{% static 'js/jquery.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/carouFredSel.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js'%}"></script>
+    {% block js %}{% endblock %}
+
+</head>
+<body>
+{% block header %}
+	<header>
+		<div class="wrapper">
+			<img src="img/logo.png" alt="Logo" class="logo">
+			<a href="#" class="menu_icon" id="menu_icon"></a>
+			<nav id="nav_menu">
+				<ul>
+					<li><a href="/">Inicio</a></li>
+					<li><a href="#">Servicios</a></li>
+					<li><a href="{% url 'profesores' %}">Profesores</a></li>
+					<li><a href="#">Revista</a></li>
+					<li><a href="#">Recursos</a></li>
+				</ul>
+			</nav>
+
+			<ul class="social">
+				<li><a class="fb" href="#"></a></li>
+				<li><a class="twitter" href="#"></a></li>
+				<li><a class="gplus" href="#"></a></li>
+			</ul>
+		</div>
+	</header><!--  End Header  -->
+{% endblock %}
+
+{% block content%}
+{% endblock %}
+
+<footer>
+		<p class="rights">Diseñado por <span>Sikuinnova</span></p>
+	</footer><!--  End Footer  -->
+
+</body>
+</html>

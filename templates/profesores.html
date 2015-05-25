@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{%load static from staticfiles%}
+
+	{% block css %}
+		<link href="{% static 'web/css/style.css'%}" rel='stylesheet' type='text/css' />
+		<link rel="shortcut icon" type="image/x-icon" href="images/fav-icon.png" />
+		<!--webfonts-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<!-- Global CSS for the page and tiles -->
+  		<link rel="stylesheet" href="{% static 'web/css/main.css'%}">
+	{% endblock %}
+
+	{% block content %}
+	<body>
+		<!---start-wrap-->
+		
+		<!---//End-header-->
+		<!---start-content-->
+		<div class="content">
+			<div class="wrap">
+			 <div id="main" role="main">
+			      <ul id="tiles">
+
+			      {%for profesor in object_list%}
+			        <!-- These are our grid blocks -->
+			        <li>
+			        	<img src="{{profesor.image.url}}" width="282" height="118">
+			        	<div class="post-info">
+			        		<div class="post-basic-info">
+				        		<h3>{{profesor.nombre}}</h3>
+				        		<span><label> </label>{{profesor.lugar_apredizaje}}</span>
+				        		<p>{{profesor.estudios}}</p>
+			        		</div>
+			        	</div>
+			        </li>
+			        {% endfor %}
+			        <!-- End of grid blocks -->
+			      </ul>
+			    </div>
+			</div>
+		</div>
+		<!---//End-content---->
+	</body>
+	{% endblock %}
