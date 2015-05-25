@@ -87,10 +87,10 @@ WSGI_APPLICATION = 'linguoweb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'linguo_db',
-        'HOST' : 'localhost',
-        'USER' : 'arce',
-        'PASSWORD' : 'arce',
+        'NAME': 'd3n3sa24euhruf',
+        'HOST' : 'ec2-23-21-140-156.compute-1.amazonaws.com',
+        'USER' : 'qgejboxwgrsham',
+        'PASSWORD' : 'T8g1jU-glqiK8siN3NIp4lotWG',
         'PORT' : '5432',
     }
 }
