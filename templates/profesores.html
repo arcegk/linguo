@@ -17,8 +17,8 @@
 			<div class="row destacados">
 			{% for profesor in object_list%}
 				<div class="col-md-6 md">
-		    		<div class="bckn">
-						<img src="{{profesor.foto_url}}" alt="Texto Alternativo" class="img-de">
+		    		<div class="bckn" style="height:100%">
+						<div><img src="{{profesor.foto_url}}" alt="Texto Alternativo" class="img-de"></div>
 						<h2><strong>{{profesor.nombre}}</strong></h2>
 						<h3><span class="glyphicon glyphicon-education"></span><strong>{{profesor.lugar_apredizaje}}</strong> </h3>
 						<p><span class="glyphicon glyphicon-pencil"></span> {{profesor.estudios}}</p>

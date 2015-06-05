@@ -111,7 +111,7 @@ header nav ul{
 header nav ul li{
     float: left;
     margin-left: 35px;
-    font-size: 16px;
+    font-size: 22px;
     font-family: 'lato_regular', arial;
     letter-spacing: 1px;
 }
@@ -396,12 +396,13 @@ header ul.social li a.gplus{
     width: 50%;
     height: 245px;
     float: left;
-    background: #3b3b3b;
+    background: #fff;
     padding: 80px 0;
+
 }
 
 .info_details h3{
-    color: #fff;
+    color: #000;
     font-family: "lato_bold", arial;
     font-size: 30px;
     font-weight: bold;
@@ -414,7 +415,7 @@ header ul.social li a.gplus{
 }
 
 .info_details p{
-    color: #ededed;
+    color: #000;
     font-family: "lato_regular", arial;
     font-size: 16px;
     max-width: 560px;

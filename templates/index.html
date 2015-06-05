@@ -16,7 +16,10 @@
 			{% for feature in features %}
 				<div class="feature">
 					<div class="ficon">
-						<img src="{% static 'img/menu_icon.png' %}" alt="">
+					    {% static 'img/idea.png' as im1 %}
+					    {% static 'img/prof.png' as im2 %}
+					    {% static 'img/rev.png' as im3 %}
+						<img src="{% cycle im1 im2 im3 %}" alt="">
 					</div>
 					<div class="details_exp">
 						<h3>{{feature.titulo}}</h3>

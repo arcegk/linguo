@@ -34,6 +34,10 @@
 
 }
 
+@icon-font-path{
+    
+}
+
 
 @font-face {
     font-family: 'lato_bold';
@@ -98,6 +102,7 @@ header{
 header .logo{
     float: left;
     margin-top: 21px;
+    margin-left: 15px;
 }
 
 header .menu_icon{
@@ -113,7 +118,7 @@ header .menu_icon{
 header nav{
     overflow: hidden;
     display: inline-block;
-    margin: 20px 0 0 40px;
+    margin: 20px 0 0 15px;
     padding: 13px 40px;
     border-left: 1px #404040 solid;
     z-index: 9999;
@@ -126,7 +131,7 @@ header nav ul{
 header nav ul li{
     float: left;
     margin-left: 35px;
-    font-size: 16px;
+    font-size: 21px;
     font-family: 'lato_regular', arial;
     letter-spacing: 1px;
 }
@@ -393,7 +398,7 @@ header ul.social li a.gplus{
 .info{
     width: 100%;
     overflow: hidden;
-    background: #3b3b3b;
+    background: #fff;
 }
 
 .info_pic{
@@ -415,10 +420,12 @@ header ul.social li a.gplus{
     height: 245px;
     float: left;
     padding: 80px 0;
+    padding-bottom: 2em;
+    margin-bottom: .7em;
 }
 
 .info_details h3{
-    color: #fff;
+    color: #000;
     font-family: "lato_bold", arial;
     font-size: 30px;
     font-weight: bold;
@@ -431,13 +438,14 @@ header ul.social li a.gplus{
 }
 
 .info_details p{
-    color: #ededed;
+    color: #000;
     font-family: "lato_regular", arial;
     font-size: 16px;
     max-width: 560px;
     margin: 0 0 3.333333333333333% 40px;
     letter-spacing: 1px;
     line-height: 30px;
+
 }
 
 .info_details a{
@@ -448,10 +456,11 @@ header ul.social li a.gplus{
     text-decoration: none;
 }
 
-.info_details a span{
-    margin-left: 10px;
-}
 
+.bckn{
+    background-color: #F5F5F5;
+
+}
 
 
 
@@ -510,7 +519,18 @@ header ul.social li a.gplus{
     margin: 0 auto;
 }
 
+.morecontent span {
+    display: none;
+    }
 
+a.morelink {
+    text-decoration:none;
+    outline: none;
+}
+
+.more a {
+    color: #C81B1B;
+}
 
 
 /*  Footer  */
@@ -648,6 +668,9 @@ a{
     {
         margin-right: 0!important;
     }
+    
+    
+
 }
 
 @media (max-width:500px){

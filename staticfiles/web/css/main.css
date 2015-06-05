@@ -2,7 +2,8 @@
  * Grid container
  */
 #main {
-	margin-top: 9em;
+	margin-top: 2em;
+  margin-bottom: 2em;
 }
 #tiles {
   list-style-type: none;
