@@ -403,10 +403,13 @@ header ul.social li a.gplus{
 
 .info_pic{
     display: block;
-    width: 50%;
-    height: 405px;
+    width: 45%;
+    height: 250px;
     float: left;
-    background: url('../img/info_img.jpg') no-repeat;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 5px;
+    padding-top: 45px;
 
     background-size: cover;
     -webkit-background-size: cover;
@@ -417,11 +420,13 @@ header ul.social li a.gplus{
 .info_details{
     display: block;
     width: 50%;
-    height: 245px;
+    height: auto;
     float: left;
     padding: 80px 0;
     padding-bottom: 2em;
     margin-bottom: .7em;
+    margin-left: 15px;
+
 }
 
 .info_details h3{
@@ -445,6 +450,7 @@ header ul.social li a.gplus{
     margin: 0 0 3.333333333333333% 40px;
     letter-spacing: 1px;
     line-height: 30px;
+    text-align: justify;
 
 }
 
@@ -523,11 +529,14 @@ header ul.social li a.gplus{
 
 .morecontent span {
     display: none;
+
+    
     }
 
 a.morelink {
     text-decoration:none;
     outline: none;
+    margin-bottom:  2em;
 }
 
 .more a {

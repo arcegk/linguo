@@ -8,7 +8,7 @@
     var ellipsestext = "...";
     var moretext = "Leer más";
     var lesstext = "Leer menos";
-    $('p').each(function() {
+    $('.dfd').each(function() {
         var content = $(this).html();
        
  		console.log(content);
@@ -17,7 +17,7 @@
             var c = content.substr(0, showChar);
             var h = content.substr(showChar-1, content.length - showChar);
  
-            var html = c + '<span class="moreellipses">' + ellipsestext+ ' </span><span class="morecontent"><span>' + h + '</span>  <a href="" class="morelink">' + moretext + '</a></span>';
+            var html = c + '<span class="moreellipses">' + ellipsestext+ ' </span><span class="morecontent"><span>' + h + '</span>  <a href="" class="morelink">' + moretext + '</a>';
             
  
             $(this).html(html);
@@ -45,9 +45,11 @@
 {%block content %}
 <body>
 		<div class="content">
-			<section class="info">
+			<section class="info" >
 				 {%for servicio in servicios%}
-				 <div class="info_details more">
+				<div class="info_pic" style="{%cycle 'float:right' 'float:left' %}; background: url('{{servicio.imagen}}') no-repeat  ">
+				</div>
+				 <div class="info_details more" style="{%cycle 'float:right' 'float:left' %}">
 				 	<h3>{{servicio.titulo}}</h3>
 				 	<div id="me">
 				 	<p>{{servicio.texto}}</p>
