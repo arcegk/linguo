@@ -1186,4 +1186,43 @@ span.mail a:hover{
 		font-size: 1em;
 	}
 }
+
+	.destacados{
+    padding: 20px 0;
+	text-align: center;
+	}
+	.destacados > div > div{
+		padding: 10px;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		transition: 0.2s;
+	}
+	.destacados > div:hover > div{
+		margin-top: -10px;
+		border: 1px solid rgb(200, 200, 200);
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+		background: rgba(200, 200, 200, 0.1);
+		transition: 0.5s;
+}
+
+.img-de{
+   height: 120px;
+   width: 120px;
+   margin: 5px 30px 30px 25px;
+
+   float: left;
+   overflow: hidden;
+     
+   -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+       border-radius: 50%;
+}
+
+.md p{
+	margin: .2em;
+	text-align: justify;
+
+}
+
+
 /*--//End-media Quries for 320px-monitors-*/

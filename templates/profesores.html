@@ -8,33 +8,28 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 		<!-- Global CSS for the page and tiles -->
   		<link rel="stylesheet" href="{% static 'web/css/main.css'%}">
+  		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
 	{% endblock %}
 
 	{% block content %}
-	<body>
-		<div class="content">
-			<div class="wrap">
-			 <div id="main" role="main">
-			      
-			      <ul id="tiles">
-			      {%for profesor in object_list%}
-			        <!-- These are our grid blocks -->
-			        <li>
-			        	<img src="{{profesor.foto_url}}" width="282" height="200">
-			        	<div class="post-info">
-			        		<div class="post-basic-info">
-				        		<h3>{{profesor.nombre}}</h3>
-				        		<span><label> </label>{{profesor.lugar_apredizaje}}</span>
-				        		<p>{{profesor.estudios}}</p>
-			        		</div>
-			        	</div>
-			        </li>
-			        {% endfor %}
-			        <!-- End of grid blocks -->
-			      </ul>
-			    </div>
+	<body>	
+		<div class="container">
+			<div class="row destacados">
+			{% for profesor in object_list%}
+				<div class="col-md-6 md">
+		    		<div class="bckn">
+						<img src="{{profesor.foto_url}}" alt="Texto Alternativo" class="img-de">
+						<h2><strong>{{profesor.nombre}}</strong></h2>
+						<h3><span class="glyphicon glyphicon-education"></span><strong>{{profesor.lugar_apredizaje}}</strong> </h3>
+						<p><span class="glyphicon glyphicon-pencil"></span> {{profesor.estudios}}</p>
+						<a href="#" class="btn btn-danger" title="Enlace">Conoce más</a>
+					</div>
+				</div>
+			{% endfor %}	
 			</div>
 		</div>
-		<!---//End-content---->
+
+
+		<!---//End-content-->
 	</body>
 	{% endblock %}
