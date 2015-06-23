@@ -391,6 +391,37 @@ header ul.social li a.gplus{
     margin: 40px auto 0 auto;
 }
 
+.ri{
+
+    padding-top: 50px;
+    
+}
+
+.ri img{
+    padding-bottom: 25px;
+}
+
+.ria {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.rs{
+    padding-top: 20px;
+}
+
+.rsa{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nco{
+    margin-top: .7em;
+}
+ 
+.gj{
+    padding-bottom: 2em;
+}
 
 
 
@@ -455,10 +486,9 @@ header ul.social li a.gplus{
 }
 
 .info_details a{
-    color: #fff;
+    color: #DEDEDE;
     font-family: "lato_regular", arial;
     font-size: 16px;
-    margin: 0 0 0 40px;
     text-decoration: none;
 }
 

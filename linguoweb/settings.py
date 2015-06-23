@@ -47,6 +47,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'web',
+    'tinymce',
+    'ckeditor',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -79,6 +81,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'linguoweb.wsgi.application'
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+
 
 
 # Database

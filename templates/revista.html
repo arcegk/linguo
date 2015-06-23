@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+	{% block css %}
+	
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+	
+	{% endblock %}
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		
+			<div class="col-md-8 info_details" style="width:65%">
+				{% for cont in contenido %}
+				<h3>{{cont.titulo}}</h3>
+				<p>{{cont.texto|safe}}</p>	
+				{% endfor %}	
+			</div>
+			
+			<div class="col-md-4 ri">	
+				<div><img src="{{last.imagen}}"></div>
+				<div><h2>¡Descarga nuestras ediciones!</h2></div>
+				<div class="ria">
+
+					{% for rev in object_list %}
+						<a href="{{rev.descarga}}">{{rev.edicion}}</a>
+					{% endfor %}
+
+				</div>
+				
+			</div>
+	</div>
+	
+</div>
+
+
+
+{% endblock%}

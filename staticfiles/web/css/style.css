@@ -1189,7 +1189,7 @@ span.mail a:hover{
 
 	.destacados{
     padding: 20px 0;
-	text-align: center;
+	
 	}
 	.destacados > div > div{
 		padding: 10px;
@@ -1209,6 +1209,7 @@ span.mail a:hover{
    height: 120px;
    width: 120px;
    margin: 5px 30px 30px 25px;
+   position: relative;
 
    float: left;
    overflow: hidden;
@@ -1220,8 +1221,12 @@ span.mail a:hover{
 
 .md p{
 	margin: .2em;
-	text-align: justify;
+	text-align: left;
+}
 
+.md h1{
+	text-align: center;
+	margin: .2em;
 }
 
 

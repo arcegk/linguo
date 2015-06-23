@@ -19,9 +19,24 @@
 				<div class="col-md-6 md">
 		    		<div class="bckn" style="height:100%">
 						<div><img src="{{profesor.foto_url}}" alt="Texto Alternativo" class="img-de"></div>
-						<h2><strong>{{profesor.nombre}}</strong></h2>
-						<h3><span class="glyphicon glyphicon-education"></span><strong>{{profesor.lugar_apredizaje}}</strong> </h3>
-						<p><span class="glyphicon glyphicon-pencil"></span> {{profesor.estudios}}</p>
+						<h1><strong>{{profesor.nombre}}</strong></h1>
+						
+						<h3><span class="glyphicon glyphicon-ok-circle"></span><strong>Idioma :</strong>
+						{% for lang in profesor.idioma.all %}
+						{{lang.nombre}}
+						{% if not forloop.last %} / {% endif%} 
+						{% endfor %} </h3>
+						
+						<p><span class="glyphicon glyphicon-globe"></span><strong>Sector :</strong> {{profesor.sector}}</p>
+						
+						<p><span class="glyphicon glyphicon-blackboard"></span><strong>Modalidad :</strong>    {% for mod in profesor.modalidad.all %} 
+							{{mod.modalidad}} 
+							{% if not forloop.last %} / {% endif%} 
+						{% endfor %}
+						</p>
+						
+						<p><span class="glyphicon glyphicon-bookmark"></span> {{profesor.experiencia}} de experiencia</p>
+
 						<a href="#" class="btn btn-danger" title="Enlace">Conoce más</a>
 					</div>
 				</div>
