@@ -10,12 +10,20 @@
 	<script type="text/javascript">
 $(document).ready(function() {
 	$('.gj').hide();
+	$('.ttc').hide();
 
 	$(".tgl").click(function(){
         $(this).find('.gj').toggle("slow");
-        console.log("click")
+        console.log("click");
         return false;
     });
+
+	$(".hj").click(function(){
+        $(this).find('.ttc').toggle("slow");
+        console.log("clock")
+        return false;
+    });
+
 });
 	</script>
 	{% endblock %}
@@ -25,22 +33,28 @@ $(document).ready(function() {
 
 	<div class="container">
 	<div class="row">
-	<div class="col-md-8 rs">
-	{% for cont in contenido %}
+	<div class="col-md-5 rs">
+	{% for mod in modulos %}
 
 	<div class="col-md-12 tgl">
-		<div class="well">
-		<h3>{{cont.titulo}}</h3>
+		<div class="well" >
+		<h3>{{mod.modulo}}</h3>
 		</div>
 		<div class="gj">
-			{{cont.texto|safe}}	
+		{% for lvl in mod.levels.all %}
+		<div class="hj">
+		
+			<div class="well" style="{%cycle 'background-color:#E82761' 'background-color:#E300D0' 'background-color:#6600E3' 'background-color:#6A04C9'%} ; color: white;"><h2>{{lvl.nivel}}</h2></div>
+			<div class="ttc">{{lvl.texto|safe}}</div>	
+		</div>
+		{% endfor %}
 		</div>
 	</div>
 	{% endfor %}
 	</div>			
 
 	
-	<div class="col-md-4">
+	<div class="col-md-7">
 		{% for not in connot %}
 		<div class="col-md-12 rsa snr">
 			

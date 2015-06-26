@@ -52,7 +52,7 @@
 				 <div class="info_details more" style="{%cycle 'float:right' 'float:left' %}">
 				 	<h3>{{servicio.titulo}}</h3>
 				 	<div id="me">
-				 	<p>{{servicio.texto}}</p>
+				 	<p>{{servicio.texto|safe}}</p>
 				 	</div>
 				 </div>
 				 {% endfor %}

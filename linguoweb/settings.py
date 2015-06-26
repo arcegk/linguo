@@ -47,8 +47,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'web',
-    'tinymce',
+    'bootstrap3',
     'ckeditor',
+    
 )
 
 MIDDLEWARE_CLASSES = (

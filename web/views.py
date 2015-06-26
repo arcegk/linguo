@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, ListView
-from .models import Profesor , Contenido , Revista
+from django.views.generic import TemplateView, ListView , FormView
+from .models import Profesor , Contenido , Revista , Modulo
+from .forms import ContactForm
 # Create your views here.
 
 class HomeTemplateView(TemplateView):
@@ -40,6 +41,12 @@ class RecursoTemplateView(TemplateView):
 
 	def get_context_data(self, *args , **kwargs):
 		context = super(RecursoTemplateView, self).get_context_data(**kwargs)
-		context['contenido'] = Contenido.objects.filter(seccion="RECURSOS")
+		context['modulos'] = Modulo.objects.all()
 		context['connot'] = Contenido.objects.filter(seccion="RECURSOS-NOTICIAS")
 		return context
+
+class ContactFormView(FormView):
+	form_class = ContactForm
+	template_name = "contacto.html"
+
+

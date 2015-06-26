@@ -1,7 +1,7 @@
 from django.conf.urls import include, url
 from django.contrib import admin
 from web.views import HomeTemplateView , ProfesorListView , ServicioTemplateView , RevistaListView ,\
- RecursoTemplateView
+ RecursoTemplateView , ContactFormView
 
 urlpatterns = [
     # Examples:
@@ -13,5 +13,6 @@ urlpatterns = [
     url(r'^servicios/', ServicioTemplateView.as_view(), name='servicios'),
     url(r'^revista/' , RevistaListView.as_view(), name='revista' ),
     url(r'^recursos/', RecursoTemplateView.as_view(), name='recursos'),
+    url(r'^contacto/', ContactFormView.as_view() , name='contacto'),
     
 ]

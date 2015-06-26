@@ -2,7 +2,7 @@
  * Grid container
  */
 #main {
-	margin-top: 2em;
+  margin-top: 2em;
   margin-bottom: 2em;
 }
 #tiles {
@@ -12,25 +12,25 @@
   padding: 0;
 }
 #tiles li:hover img{
-	opacity:0.8;
+  opacity:0.8;
 }
 /**
  * Grid items
  */
 #tiles li {
- 	width: 280px;
-	background-color: #ffffff;
-	border: 1px solid #dedede;
-	border-radius: 2px;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	cursor: pointer;
-	border-radius: 0.2em;
+  width: 280px;
+  background-color: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  cursor: pointer;
+  border-radius: 0.2em;
   display: inline-block;
 }
 #tiles li img{
-	border-top-left-radius:0.2em;
-	border-top-right-radius:0.2em;
+  border-top-left-radius:0.2em;
+  border-top-right-radius:0.2em;
 }
 #tiles li.inactive {
   visibility: hidden;
@@ -38,22 +38,10 @@
 }
 
 #tiles li img {
- 	display: block;
+  display: block;
 }
 
-/**
- * Grid item text
- */
 
-footer {
-  text-align: center;
-
-}
-
-footer a {
-  color: #435DC5;
-  text-decoration: none;
-}
 
 /**
  * Progress bar for imagesLoaded
@@ -125,23 +113,22 @@ footer a {
 }
 /*--media Quries for 640px-monitors-*/
 @media only screen and (max-width:640px) and (min-width:480px) {
-	#main {
-		margin-top: 7em;
-	}
+  #main {
+    margin-top: 7em;
+  }
 }
 /*--media Quries for 480px-monitors-*/
 @media only screen and (max-width:480px) and (min-width:320px) {
-	#main {
-		margin-top: 9.5em;
-	}
+  #main {
+    margin-top: 9.5em;
+  }
 }
 /*--media Quries for 320px-monitors-*/
 @media only screen and (max-width:320px) and (min-width:240px) {
-	#main {
-		margin-top: 9em;
-	}
-	#tiles li {
-		width: 266px;
-	}
+  #main {
+    margin-top: 9em;
+  }
+  #tiles li {
+    width: 266px;
+  }
 }
-

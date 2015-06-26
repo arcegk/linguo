@@ -29,10 +29,10 @@ class Profesor(models.Model):
 	experiencia = models.CharField(max_length=70)
 	sector = models.CharField(max_length=25, choices=constants.SECTOR)
 	estudios = models.TextField(max_length=350)
-	referencia_personal_1 = models.CharField(max_length=100 , verbose_name="Referencia personal 1")
-	referencia_personal_2 = models.CharField(max_length=100 , verbose_name="Referencia personal 2")
-	referencia_come_1 = models.CharField(max_length=100 , verbose_name="Referencia personal 1")
-	referencia_come_2 = models.CharField(max_length=100 , verbose_name="Referencia personal 1")
+	referencia_personal_1 = models.CharField(max_length=100 , verbose_name="Referencia personal 1" , blank=True)
+	referencia_personal_2 = models.CharField(max_length=100 , verbose_name="Referencia personal 2" , blank=True)
+	referencia_come_1 = models.CharField(max_length=100 , verbose_name="Referencia personal 1" , blank=True)
+	referencia_come_2 = models.CharField(max_length=100 , verbose_name="Referencia personal 1" , blank=True)
 
 
 	def __unicode__(self):
@@ -56,5 +56,23 @@ class Revista(models.Model):
 
 	def __unicode__(self):
 		return self.edicion
+
+
+class Nivel(models.Model):
+	nivel = models.CharField(max_length=25)
+	texto = RichTextField()
+
+
+	def __unicode__(self):
+		return  self.nivel
+
+class Modulo(models.Model):
+	modulo = models.CharField(max_length=25)
+	levels = models.ManyToManyField('Nivel', blank=True)
+
+	def __unicode__(self):
+		return self.modulo
+
+
 
 

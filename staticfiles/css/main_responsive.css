@@ -397,6 +397,47 @@ header ul.social li a.gplus{
     
 }
 
+.ri img{
+    padding-bottom: 25px;
+}
+
+.ria {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.rs{
+    padding-top: 20px;
+}
+
+.rsa{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nco{
+    margin-top: .7em;
+}
+ 
+.gj{
+    padding-bottom: 2em;
+}
+
+.fitem{
+    padding: .33em;
+    display: inline-block;
+    font-family: "avantgardelt-extralight";
+}
+
+.fitem a{
+    text-decoration: none;
+}
+
+.siku{
+    float: right;
+    font-family: "avantgardelt-extralight"
+}
+
 
 
 /*  Info Section  */
@@ -411,7 +452,7 @@ header ul.social li a.gplus{
     width: 45%;
     height: 250px;
     float: left;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-left: 20px;
     margin-right: 5px;
     padding-top: 45px;
@@ -460,10 +501,9 @@ header ul.social li a.gplus{
 }
 
 .info_details a{
-    color: #fff;
+    color: #DEDEDE;
     font-family: "lato_regular", arial;
     font-size: 16px;
-    margin: 0 0 0 40px;
     text-decoration: none;
 }
 
@@ -551,19 +591,12 @@ a.morelink {
 
 /*  Footer  */
 footer{
-    padding: 100px 0;
+    padding: 5em;
     border-top: 1px #dedede solid;
     background: #f7f7f7;
-    text-align: center;
 }
 
-footer .rights{
-    color: #3b3b3b;
-    font-family: "lato_regular", arial;
-    font-size: 14px;
-    margin-top: 30px;
-    line-height: 25px;
-}
+
 
 footer .rights a{
     text-decoration: none;

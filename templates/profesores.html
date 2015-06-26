@@ -23,11 +23,11 @@
 						
 						<h3><span class="glyphicon glyphicon-ok-circle"></span><strong>Idioma :</strong>
 						{% for lang in profesor.idioma.all %}
-						{{lang.nombre}}
+						{{lang.nombre}}   
 						{% if not forloop.last %} / {% endif%} 
 						{% endfor %} </h3>
 						
-						<p><span class="glyphicon glyphicon-globe"></span><strong>Sector :</strong> {{profesor.sector}}</p>
+						<p><span class="glyphicon glyphicon-map-marker"></span><strong>Sector :</strong> {{profesor.sector}}</p>
 						
 						<p><span class="glyphicon glyphicon-blackboard"></span><strong>Modalidad :</strong>    {% for mod in profesor.modalidad.all %} 
 							{{mod.modalidad}} 

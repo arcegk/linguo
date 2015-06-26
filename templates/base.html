@@ -30,6 +30,7 @@
 					<li><a href="{% url 'profesores' %}">Profesores</a></li>
 					<li><a href="{% url 'revista' %}">Revista</a></li>
 					<li><a href="{% url 'recursos' %}">Recursos</a></li>
+					<li><a href="{% url 'contacto' %}">Contacto</a></li>
 				</ul>
 			</nav>
 
@@ -46,7 +47,13 @@
 {% endblock %}
 
 <footer>
-		<p class="rights">Design by <span>Sikuinnova</span></p>
+				<div class="fitem"><a href="/">Inicio</a></div>
+				<div class="fitem"><a href="{% url 'servicios' %}">Servicios</a></div>
+				<div class="fitem"><a href="{% url 'profesores' %}">Profesores</a></div>
+				<div class="fitem"><a href="{% url 'revista' %}">Revista</a></div>					
+				<div class="fitem"><a href="{% url 'recursos' %}">Recursos</a></div>
+				<div class="siku"><strong>Desing By SikuInnova</strong></div>
+				
 	</footer><!--  End Footer  -->
 
 </body>
