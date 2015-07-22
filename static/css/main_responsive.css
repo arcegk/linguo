@@ -101,8 +101,9 @@ header{
 
 header .logo{
     float: left;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-left: 15px;
+
 }
 
 header .menu_icon{
@@ -455,6 +456,59 @@ header ul.social li a.gplus{
 
 }
 
+.kf h1{
+    font-size: 26px;
+}
+
+.wa{
+    padding-top: 1em;
+}
+
+.ctic{
+    display: inline-block; 
+    padding-top: .5em; 
+    padding-right: .5em;
+}
+
+.ctin{
+
+    display: inline-block;
+}
+
+.titel{
+    padding-bottom: 1em;
+    padding-left: .8em; 
+}
+
+.titel h1{
+    font-size: 26px;
+}
+
+.panel {
+    padding: 2em;
+}
+
+.panel h2 {
+    padding-bottom: .3em;
+}
+
+.panel h3 {
+    padding-top: .4em;
+}
+
+
+.add a{
+    color: #C81B1B;
+}
+
+.lbl {
+    padding-bottom: .4em;
+}
+
+.lbl a{
+    color : #FF7D7D;
+}
+
 /*  Info Section  */
 .info{
     width: 100%;
@@ -472,10 +526,10 @@ header ul.social li a.gplus{
     margin-right: 5px;
     padding-top: 45px;
 
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
 }
 
 .info_details{
@@ -601,6 +655,7 @@ a.morelink {
 
 .more a {
     color: #C81B1B;
+    padding-left: 2.3em; 
 }
 
 

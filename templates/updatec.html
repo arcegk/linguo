@@ -1,0 +1,25 @@
+{% load bootstrap3 %}
+{% load static from staticfiles %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+<script type="text/javascript" src="/static/admin/js/jquery.js"></script>
+
+<div class="container">
+<form action="" method="post">{% csrf_token %}
+<div class="row">
+        
+     <div class="col-md-12">{% bootstrap_field form.titulo %}</div>
+     <div class="col-md-12">{% bootstrap_field form.descripcion %}</div>
+     <div class="col-md-12">{% bootstrap_field form.seccion %}</div>  
+     <div class="col-md-12">{% bootstrap_field form.imagen %}</div>
+     {{form.media}}
+     <div class="col-md-12">{% bootstrap_field form.texto %}</div>
+     {% buttons %}
+        <button type="submit" class="btn btn-primary">
+            Guardar
+        </button>
+    {% endbuttons %}
+
+</div>
+</form>
+</div>

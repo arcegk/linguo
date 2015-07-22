@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% block css %}
+	
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+	
+	{% endblock %}
+
+
+	{% block content %}
+	
+
+	<div class="panel">
+	<div class="add"><h2><a href="{% url 'c_create' %}">AGREGAR CONTENIDO</a></h2></div>
+	<h2>INICIO</h2>
+	{% for inicio in inicio%}
+	<div>
+	<a href="{% url 'editC' inicio.id %}">{{inicio.titulo}}</a>
+	</div>
+	{% endfor %}
+	</div>
+	
+	<div class="panel">
+	<h2>SERVICIOS</h2>
+	{% for service in services%}
+	<div>
+	<a href="{% url 'editC' service.id %}">{{service.titulo}}</a>
+	</div>
+	{% endfor %}
+	</div>
+
+	<div class="panel">
+	<h2>REVISTA</h2>
+	{% for journal in journal%}
+	<div>
+	<a href="{% url 'editC' journal.id %}">{{journal.titulo}}</a>
+	</div>
+	{% endfor %}
+	<h3>EDICIONES</h3>
+	{% for rev in revista %}
+	<div>
+	<a href="{% url 'editR' rev.id %}">{{rev.edicion}}</a>
+	<div class="add"><h2><a href="{% url 'r_create' %}">AGREGAR REVISTA!</a></h2></div>
+	</div>
+	{% endfor %}
+
+	</div>
+
+	<div class="panel" >
+	<H2>RECURSOS</H2>
+	<H3>NOTICIAS</H3>
+	{% for resource in resources%}
+
+	<div>
+	<a href="{% url 'editC' resource.id %}">{{resource.titulo}}</a>
+	</div>
+	{% endfor %}
+
+	<H3>NIVELES</H3>
+	{% for lvl in levels%}
+	<div><a href="{% url 'editM' lvl.id %}">{{lvl.modulo}}</a></div>
+	{% for l in lvl.levels.all %}
+	<div class="lbl">
+	<a href="{% url 'editN' l.id %}">{{l.nivel}}</a>
+	</div>
+	{% endfor %}
+
+	{% endfor %}
+
+	<div class="add"><h2><a href="{% url 'n_create' %}">AGREGAR NIVEL!</a></h2></div>
+	
+	</div>
+
+	<div class="panel">
+	<div class="add"><h2><a href="{% url 'pro_edit' %}">PROFESORES</a></h2></div>
+	</div>
+
+	{% endblock %}
+

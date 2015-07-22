@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% block css %}
+	
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+	
+	{% endblock %}
+
+
+	{% block content %}
+
+	<div class="panel">
+	<div class="add"><h2><a href="{% url 'p_create' %}">AGREGAR PROFESOR</a></h2></div>
+
+	<h2>Lista de profesores</h2>
+	{% for pro in object_list%}
+	<div>
+	<a href="{% url 'editPro' pro.id %}">{{pro.nombre}}</a>
+	</div>
+	{% endfor %}
+	</div>
+	{% endblock %}

@@ -47,14 +47,16 @@
 		<div class="content">
 			<section class="info" >
 				 {%for servicio in servicios%}
-				<div class="info_pic" style="{%cycle 'float:right' 'float:left' %}; background: url('{{servicio.imagen}}') no-repeat  ">
+				<div class="info_pic" style="{%cycle 'float:right' 'float:left' %}; background: url('{{servicio.imagen}}') no-repeat;  background-size: 100% 100%;  ">
 				</div>
 				 <div class="info_details more" style="{%cycle 'float:right' 'float:left' %}">
 				 	<h3>{{servicio.titulo}}</h3>
 				 	<div id="me">
 				 	<p>{{servicio.texto|safe}}</p>
 				 	</div>
+                    <a href="{% url 'contacto' %}"><strong>¡Cotizar!</strong></a>
 				 </div>
+
 				 {% endfor %}
 			</section>
 			</div>	 
