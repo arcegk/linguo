@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^pro/(?P<pk>\d+)/editar/$' , ProfesorUpdateView.as_view() , name='editPro'),
     url(r'^pro_create/$' , ProfesorCreateView.as_view() , name='p_create'),
     url(r'^edit_pro/$' , ProListView.as_view() , name='pro_edit'),
+    url(r'^login/' , 'django.contrib.auth.views.login' , { 'template_name' : 'login.html'  }) ,
 ]
 
 

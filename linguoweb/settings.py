@@ -49,6 +49,7 @@ INSTALLED_APPS = (
     'web',
     'bootstrap3',
     'ckeditor',
+    'braces',
     
 )
 

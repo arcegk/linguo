@@ -3,6 +3,7 @@ from django.views.generic import TemplateView, ListView , FormView , UpdateView 
 from .models import Profesor , Contenido , Revista , Modulo , Nivel , Profesor
 from .forms import ContactForm , ContenidoUpdateForm , RevistaUpdateForm , ModuloUpdateForm , NivelUpdateForm ,\
 NivelCreateForm , ContenidoCreateForm , RevistaCreateForm , ProfesorCreateForm , ProfesorUpdateForm
+from braces.views import StaffuserRequiredMixin
 
 from django.core.urlresolvers import reverse, reverse_lazy
 # Create your views here.
@@ -44,7 +45,7 @@ class RecursoTemplateView(TemplateView):
 
 	def get_context_data(self, *args , **kwargs):
 		context = super(RecursoTemplateView, self).get_context_data(**kwargs)
-		context['modulos'] = Modulo.objects.all()
+		context['modulos'] = Modulo.objects.all().order_by("id")
 		context['connot'] = Contenido.objects.filter(seccion="RECURSOS-NOTICIAS")
 		return context
 
@@ -53,9 +54,11 @@ class ContactFormView(FormView):
 	template_name = "contacto.html"
 
 
-class PanelView(TemplateView):
+class PanelView(StaffuserRequiredMixin,TemplateView):
 	
 	template_name = "panel.html"
+	login_url = "/login"
+	
 
 	def get_context_data(self, *args , **kwargs):
 		context = super(PanelView, self).get_context_data(**kwargs)
