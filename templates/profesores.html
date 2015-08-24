@@ -37,7 +37,7 @@
 						
 						<p><span class="glyphicon glyphicon-bookmark"></span> {{profesor.experiencia}} de experiencia</p>
 
-						<a href="#" class="btn btn-danger" title="Enlace">Conoce más</a>
+						<a href="{% url 'profesor-detail' profesor.pk %}" class="btn btn-danger" title="Enlace">Conoce más</a>
 					</div>
 				</div>
 			{% endfor %}	

@@ -3,7 +3,7 @@ from django.contrib import admin
 from web.views import HomeTemplateView , ProfesorListView , ServicioTemplateView , RevistaListView ,\
  RecursoTemplateView , ContactFormView , PanelView , ContenidoUpdateView , RevistaUpdateView , ModuloUpdateView ,\
  NivelUpdateView , ContenidoCreateView , RevistaCreateView , NivelCreateView , ProfesorUpdateView ,\
- ProfesorCreateView , ProListView
+ ProfesorCreateView , ProListView , ProfesorDetailView
 
 urlpatterns = [
     # Examples:
@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^pro_create/$' , ProfesorCreateView.as_view() , name='p_create'),
     url(r'^edit_pro/$' , ProListView.as_view() , name='pro_edit'),
     url(r'^login/' , 'django.contrib.auth.views.login' , { 'template_name' : 'login.html'  }) ,
+    url(r'^profesor/(?P<pk>\d+)/detail/$', ProfesorDetailView.as_view(), name='profesor-detail'),
 ]
 
 

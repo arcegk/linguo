@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, ListView , FormView , UpdateView , CreateView
+from django.views.generic import TemplateView, ListView , FormView , UpdateView , CreateView , DetailView
 from .models import Profesor , Contenido , Revista , Modulo , Nivel , Profesor
 from .forms import ContactForm , ContenidoUpdateForm , RevistaUpdateForm , ModuloUpdateForm , NivelUpdateForm ,\
 NivelCreateForm , ContenidoCreateForm , RevistaCreateForm , ProfesorCreateForm , ProfesorUpdateForm
@@ -146,3 +146,7 @@ class ProfesorUpdateView(UpdateView):
 	form_class = ProfesorUpdateForm
 	template_name = "updatePro.html"
 	success_url = reverse_lazy('pro_edit')
+
+class ProfesorDetailView(DetailView):
+	model = Profesor
+	template_name = "profesorDetail.html"

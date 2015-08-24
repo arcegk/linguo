@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+{% load static from staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+
+<div class="container">
+	<div class="row">	
+		<div class="col-md-6">
+			<div class="img-detail">
+			<img src="{{object.foto_url}}">
+			</div>
+		</div>	
+		<div class="col-md-6">
+			<div>
+			<h1>{{object.nombre}}</h1>
+			</div>
+			<div>
+				<div><strong>Idiomas:</strong></div>
+				<div>{% for lang in object.idioma.all %}
+					{{lang.nombre}}   
+					{% if not forloop.last %} / {% endif%} 
+				{% endfor %}
+				</div> 
+			</div>
+			<div>
+				<div><strong>Estudios:</strong></div>
+				<div>{{object.estudios}}</div>
+			</div>
+			<div>
+				<div><strong>Lugar de aprendizaje:</strong></div>
+				<div>{{object.lugar_apredizaje}}</div>
+			</div>
+			<div>
+				<div><strong>Experiencia:</strong></div>
+				<div>{{object.experiencia}}</div>
+			</div>
+			<div>
+				<div><strong>Sector:</strong></div>
+				<div>{{object.sector}}</div>
+			</div>
+			<div>
+				<div><strong>Modalidad:</strong></div>
+				<div>
+			{% for obj in object.modalidad.all %}
+				{{obj.modalidad}}
+				{% if not forloop.last %} / {% endif%} 
+			{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}
