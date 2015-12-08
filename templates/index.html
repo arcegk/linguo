@@ -4,9 +4,20 @@
 	<section class="billboard">
 			<div class="wrapper">
 				<div class="caption">
-					<p>Linguo Idiomas</p>
-					<p>¡Idiomas para todos!</p>
-				</div>
+					<p><FONT style="font-style:italic;margin-left:100px;color:red">¿Buscas profesor privado</FONT><BR>
+					 <FONT style="font-size:60px; margin-left:30px"> de idiomas a domicilio?</FONT>
+					 <BR><BR><BR>
+
+  					<FONT style="font-size:24px; margin-right:100px;float:right">Clases privadas de inglés a domicilio</FONT><BR>
+  					<FONT style="font-size:24px; margin-right:100px;float:right">Ingles a domicilio en todo cali</FONT><BR>
+  					<FONT style="font-size:24px; margin-right:100px;float:right">Profesores con idioma nativo</FONT><BR>
+  					<FONT style="font-size:24px; margin-right:100px;float:right;margin-bottom:80px">Horarios flexibles o fijos</FONT><BR><p>
+  					<p>
+					<FONT style="font-size:24px; margin-left:200px; margin-top:20px; float:left; text-align:center; color:red ; font-family: arial"><u><strong>COTIZA TUS CLASES<br> HOY</strong></u></FONT></p>
+					<div style="margin-top:10px; margin-right:100px; float:right">
+					<p>Aquí están <br><FONT style="color:gray; padding-left:50px"><strong>los mejores<strong></FONT></p>
+					</div>
+</div>
 			</div>
 	</section><!--  End Billboard  -->
 
@@ -19,12 +30,18 @@
 					    {% static 'img/idea.png' as im1 %}
 					    {% static 'img/prof.png' as im2 %}
 					    {% static 'img/rev.png' as im3 %}
-						<img src="{% cycle im1 im2 im3 %}" alt="">
+						<img src="{% cycle im2 im3 im1 %}" alt="">
 					</div>
 					<div class="details_exp">
-						<h3>{{feature.titulo}}</h3>
+
+					{% if 'revista' in feature.titulo.lower %}
+						<h3><a href="/revista">{{feature.titulo}}</a></h3>
 						<p>{{feature.texto}}</p>
 					<!--	<a href="#">more details<span>→</span></a> -->
+					{% else %}
+						<h3><a href="{{feature.titulo|lower}}">{{feature.titulo}}</a></h3>
+						<p>{{feature.texto|safe}}</p>
+					{% endif %}
 					</div>
 			</div>
 			{% endfor %}
@@ -37,19 +54,23 @@
 		<span class="sep_line sep_top">
 		</span>
 
-		<h2>Testimonials</h2>
+		<h2>LINGUO IDIOMAS LA MEJOR</h2>
 		<div class="testi_slider" id="tslider">
 			<div class="t">
-				<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu pariatur.</p>
-				<p class="author">John Doe - UX Designer</p>
+				<p>Clases de inglés privadas.</p>
+				<p class="author"><a style="text-decoration:none" href="/servicios">Conoce más</a></p>
 			</div>
 			<div class="t">
-				<p>Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu pariatur.</p>
-				<p class="author">Jane Eva - SEO Expert</p>
+				<p>Profesores nativos.</p>
+				<p class="author"><a style="text-decoration:none" href="/servicios">Conoce más</a></p>
 			</div>
 			<div class="t">
-				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu pariatur, Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<p class="author">John David - Developer</p>
+				<p>Clases de inglés a domicilio.</p>
+				<p class="author"><a style="text-decoration:none" href="/servicios">Conoce más</a></p>
+			</div>
+			<div class="t">
+				<p>Clases de inglés en el norte y sur de Cali.</p>
+				<p class="author"><a style="text-decoration:none"href="/servicios">Conoce más</a></p>
 			</div>
 		</div>
 		<div id="t_navigation"></div>

@@ -21,23 +21,21 @@
 {% block header %}
 	<header>
 		<div class="wrapper">
-			<img src="{% static 'img/logo.png' %}" alt="Logo" class="logo">
+			<img src="{% static 'img/logo1.png' %}" alt="Logo" class="logo">
 			<a href="#" class="menu_icon" id="menu_icon"></a>
 			<nav id="nav_menu">
 				<ul>
-					<li><a href="/">Inicio</a></li>
-					<li><a href="{% url 'servicios' %}">Servicios</a></li>
-					<li><a href="{% url 'profesores' %}">Profesores</a></li>
-					<li><a href="{% url 'revista' %}">Revista</a></li>
-					<li><a href="{% url 'recursos' %}">Recursos</a></li>
-					<li><a href="{% url 'contacto' %}">Contacto</a></li>
+					<li><a style="text-decoration:none" href="/">Inicio</a></li>
+					<li><a style="text-decoration:none" href="{% url 'servicios' %}">Servicios</a></li>
+					<li><a style="text-decoration:none" href="{% url 'profesores' %}">Profesores</a></li>
+					<li><a style="text-decoration:none" href="{% url 'revista' %}">Revista</a></li>
+					<li><a style="text-decoration:none" href="{% url 'recursos' %}">Recursos</a></li>
+					<li><a style="text-decoration:none" href="{% url 'contacto' %}">Contacto</a></li>
 				</ul>
 			</nav>
 
 			<ul class="social">
 				<li><a class="fb" href="#"></a></li>
-				<li><a class="twitter" href="#"></a></li>
-				<li><a class="gplus" href="#"></a></li>
 			</ul>
 		</div>
 	</header><!--  End Header  -->

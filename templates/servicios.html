@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 {% load static from staticfiles %}
+{% block css %}
+    
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+{% endblock %}
 {% block js%}
 	 <script type="text/javascript">
 	$(document).ready(function() {
@@ -54,7 +58,7 @@
 				 	<div id="me">
 				 	<p>{{servicio.texto|safe}}</p>
 				 	</div>
-                    <a href="{% url 'contacto' %}"><strong>¡Cotizar!</strong></a>
+                    <a href="{% url 'contacto' %}"><strong>¡Contáctanos y pide más información!</strong></a>
 				 </div>
 
 				 {% endfor %}

@@ -1,11 +1,15 @@
+# -*- encoding: utf-8 -*-
 from django import forms
 from .models import Contenido , Revista , Modulo , Nivel , Profesor , Modalidad , Idioma
 from ckeditor.widgets import CKEditorWidget
 
 class ContactForm(forms.Form):
 	email = forms.EmailField(required=True , label="E-mail ")
+	name = forms.CharField(required=True , label="Nombre ")
+	tel = forms.CharField(required=True , label="Teléfono " , max_length=10)
+	city = forms.CharField(required=True , label="Ciudad ")
 	subject = forms.CharField(required=True , label="Asunto ")
-	message = forms.CharField(widget=forms.Textarea, label="Mensaje ")
+	message = forms.CharField(widget=forms.Textarea, label="Mensaje ") 
 	
 
 class ContenidoUpdateForm(forms.ModelForm):
