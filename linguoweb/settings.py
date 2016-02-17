@@ -12,20 +12,22 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import environ
 from os.path import dirname , join
 BASE_DIR = dirname (dirname(__file__))
 
+env = environ.Env()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '-&!#a#cx-6e72%+1_$kz)1q4d^0vsjq)gu*b@92d-tnk!06__v'
+SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 STATIC_ROOT = 'staticfiles'
 
@@ -93,14 +95,7 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd3n3sa24euhruf',
-        'HOST' : 'ec2-23-21-140-156.compute-1.amazonaws.com',
-        'USER' : 'qgejboxwgrsham',
-        'PASSWORD' : 'T8g1jU-glqiK8siN3NIp4lotWG',
-        'PORT' : '5432',
-    }
+    'default':  env.db("DATABASE_URL")
 }
 
 
