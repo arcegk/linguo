@@ -1,21 +1,50 @@
 {% extends "base.html" %}
 {% load static from staticfiles%}
+{% block css %}
+	{{block.super}}
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+{% endblock %}
 {% block content %}
+	<div class="row" style="float:right; padding-top:10px">
+			<div class="col-md-3"><strong>Busca tu profesor :</strong></div>
+			<div class="col-md-3" style="padding-right:150px">
+				<select form="lol" name="q">
+					<option selected="selected" value="">Escoge una ciudad</option>
+					{% for ciudad in ciudades%}		
+						<option value="{{ciudad.nombre}}">{{ciudad.nombre}}</option>
+					{% endfor %}
+				</select>
+			</div>
+			<div class="col-md-3">
+				<select form="lol" name="n">
+					<option selected="selected" value="">Escoge un sector</option>
+					{% for sector in sectores%}		
+						<option value="{{sector}}">{{sector}}</option>
+					{% endfor %}
+				</select>
+			</div>
+			<div class="col-md-2">
+				<form method="GET" id="lol" action="{% url 'profesores' %}">
+					<button type="submit">Buscar</button>
+				</form>		
+			</div>
+		</div>
+
 	<section class="billboard">
 			<div class="wrapper">
 				<div class="caption">
 					<p><FONT style="font-style:italic;margin-left:100px;color:red">¿Buscas profesor privado</FONT><BR>
 					 <FONT style="font-size:60px; margin-left:30px"> de idiomas a domicilio?</FONT>
-					 <BR><BR><BR>
+					 <BR class="trem"><BR class="trem"><BR>
 
-  					<FONT style="font-size:24px; margin-right:100px;float:right">Clases privadas de inglés a domicilio</FONT><BR>
-  					<FONT style="font-size:24px; margin-right:100px;float:right">Ingles a domicilio en todo cali</FONT><BR>
-  					<FONT style="font-size:24px; margin-right:100px;float:right">Profesores con idioma nativo</FONT><BR>
-  					<FONT style="font-size:24px; margin-right:100px;float:right;margin-bottom:80px">Horarios flexibles o fijos</FONT><BR><p>
-  					<p>
-					<FONT style="font-size:24px; margin-left:200px; margin-top:20px; float:left; text-align:center; color:red ; font-family: arial"><u><strong>COTIZA TUS CLASES<br> HOY</strong></u></FONT></p>
+  					<FONT class="variable" style="font-size:30px; margin-left:350px;float:left">Clases privadas de inglés a domicilio</FONT><BR>
+  					<FONT class="variable" style="font-size:30px; margin-left:350px;float:left">Ingles a domicilio en todo cali</FONT><BR>
+  					<FONT class="variable"  style="font-size:30px; margin-left:350px;float:left">Profesores con idioma nativo</FONT><BR>
+  					<FONT class="variable" style="font-size:30px; margin-left:350px;float:left;margin-bottom:60px">Horarios flexibles o fijos</FONT><BR class="trem">
+  					<p><FONT class="variable" style="padding-left:40px">Aquí están </FONT><br class="trem"><FONT class="variable" style="color:gray;padding-left:110px"><strong>los mejores</strong></FONT></p>
+  					<p><FONT style="font-size:24px; margin-left:20px;float:left; text-align:center; font-family: arial">
+					<u><strong><a href="/contacto">COTIZA TUS CLASES<br> HOY</a></strong></u></FONT></p>
 					<div style="margin-top:10px; margin-right:100px; float:right">
-					<p>Aquí están <br><FONT style="color:gray; padding-left:50px"><strong>los mejores<strong></FONT></p>
 					</div>
 </div>
 			</div>

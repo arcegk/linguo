@@ -18,17 +18,21 @@ class Modalidad(models.Model):
 		return self.modalidad
 
 
+class Ciudad(models.Model):
+	nombre = models.CharField(max_length=30)
+
 class Profesor(models.Model):
 	nombre = models.CharField(max_length=25)
 	direccion = models.CharField(max_length=25)
 	telefono = models.CharField(max_length=15)
 	idioma = models.ManyToManyField(Idioma)
 	foto_url = models.CharField(max_length=200, blank=True, verbose_name="Enlaza una foto!")
-	modalidad = models.ManyToManyField(Modalidad)
+	modalidad = models.ManyToManyField('Modalidad')
 	lugar_apredizaje = models.CharField(max_length=50)
 	experiencia = models.CharField(max_length=70)
 	sector = models.CharField(max_length=25, choices=constants.SECTOR)
 	estudios = models.TextField(max_length=350)
+	ciudad = models.ForeignKey('Ciudad', null=True)
 	referencia_personal_1 = models.CharField(max_length=100 , verbose_name="Referencia personal 1" , blank=True)
 	referencia_personal_2 = models.CharField(max_length=100 , verbose_name="Referencia personal 2" , blank=True)
 	referencia_come_1 = models.CharField(max_length=100 , verbose_name="Referencia personal 1" , blank=True)
@@ -72,6 +76,7 @@ class Modulo(models.Model):
 
 	def __unicode__(self):
 		return self.modulo
+
 
 
 

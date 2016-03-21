@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView , FormView , UpdateView , CreateView , DetailView
-from .models import Profesor , Contenido , Revista , Modulo , Nivel , Profesor
+from .models import Profesor , Contenido , Revista , Modulo , Nivel , Profesor, Ciudad
 from .forms import ContactForm , ContenidoUpdateForm , RevistaUpdateForm , ModuloUpdateForm , NivelUpdateForm ,\
 NivelCreateForm , ContenidoCreateForm , RevistaCreateForm , ProfesorCreateForm , ProfesorUpdateForm
 from braces.views import StaffuserRequiredMixin
@@ -14,12 +14,31 @@ class HomeTemplateView(TemplateView):
 	def get_context_data(self, **kwargs):
 		context = super(HomeTemplateView, self).get_context_data(**kwargs)
 		context['features'] = Contenido.objects.filter(seccion="INICIO")
+		context['ciudades'] = Ciudad.objects.all()
+		context['sectores'] = ['NORTE','SUR','ORIENTE','OCCIDENTE']
 		return context
 
 
 class ProfesorListView(ListView):
 	model = Profesor
 	template_name = "profesores.html"
+
+	def get_queryset(self):
+		queryset = super(ProfesorListView, self).get_queryset()
+		q = self.request.GET.get('q' , None)
+		n = self.request.GET.get('n' , None)
+		if q:
+			queryset = queryset.filter(ciudad__nombre=q)
+		if n:
+			queryset = queryset.filter(sector=n)
+		return queryset
+
+	def get_context_data(self, **kwargs):
+		context = super(ProfesorListView, self).get_context_data(**kwargs)
+		context['ciudades'] = Ciudad.objects.all()
+		context['sectores'] = ['NORTE','SUR','ORIENTE','OCCIDENTE']
+		return context
+
 
 class ServicioTemplateView(TemplateView):
 	template_name = "servicios.html"

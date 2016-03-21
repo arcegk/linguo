@@ -25,7 +25,7 @@ env = environ.Env()
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -93,10 +93,7 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-DATABASES = {
-    'default':  env.db("DATABASE_URL")
-}
+DATABASES = { 'default' : env.db("DATABASE_URL") }
 
 
 # Internationalization

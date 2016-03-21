@@ -14,6 +14,29 @@
 	{% block content %}
 	<body>	
 		<div class="container">
+		<div class="row" style="padding-top:30px">
+			<div class="col-md-2">
+				<select form="lol" name="q">
+					<option selected="selected" value="">Escoge una ciudad</option>
+					{% for ciudad in ciudades%}		
+						<option value="{{ciudad.nombre}}">{{ciudad.nombre}}</option>
+					{% endfor %}
+				</select>
+			</div>
+			<div class="col-md-2">
+				<select form="lol" name="n">
+					<option selected="selected" value="">Escoge un sector</option>
+					{% for sector in sectores%}		
+						<option value="{{sector}}">{{sector}}</option>
+					{% endfor %}
+				</select>
+			</div>
+			<div class="col-md-2">
+				<form method="GET" id="lol">
+					<button type="submit">Buscar</button>
+				</form>		
+			</div>
+		</div>
 			<div class="row destacados">
 			{% for profesor in object_list%}
 				<div class="col-md-6 md">
@@ -40,7 +63,13 @@
 						<a href="{% url 'profesor-detail' profesor.pk %}" class="btn btn-danger" title="Enlace">Conoce más</a>
 					</div>
 				</div>
+			{% empty %}
+				<h1 style="text-align:center">Lo sentimos, no hay profesores en la ubicación seleccionada</h1>
+
 			{% endfor %}	
+
+			
+				</div>
 			</div>
 		</div>
 
