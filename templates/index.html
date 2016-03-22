@@ -24,6 +24,14 @@
 				</select>
 			</div>
 			<div class="col-md-2">
+				<select form="lol" name="i">
+					<option selected="selected" value="">Escoge un idioma</option>
+					{% for idioma in idiomas%}		
+						<option value="{{idioma.nombre}}">{{idioma.nombre}}</option>
+					{% endfor %}
+				</select>
+			</div>
+			<div class="col-md-2">
 				<form method="GET" id="lol" action="{% url 'profesores' %}">
 					<button type="submit">Buscar</button>
 				</form>		
